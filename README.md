@@ -6,7 +6,7 @@ A lightweight, **0.536M-parameter** Spiking Neural Network (SNN) autoencoder tha
 
 ## Overview
 
-HySNN implements a **Strategy 3 Autoencoder** architecture that blends conventional and spiking neural network components to achieve an efficient balance between reconstruction quality and model size. The encoder uses Leaky Integrate-and-Fire (LIF) neurons with surrogate gradients for biologically-inspired temporal processing, while the decoder employs a symmetric upsampling path with skip connections.
+HySNN implements architecture that blends conventional and spiking neural network components to achieve an efficient balance between reconstruction quality and model size. The encoder uses Leaky Integrate-and-Fire (LIF) neurons with surrogate gradients for biologically-inspired temporal processing, while the decoder employs a symmetric upsampling path with skip connections.
 
 Key highlights:
 
@@ -14,7 +14,7 @@ Key highlights:
 - **Test SSIM: 0.9977** (near-perfect structural fidelity)
 - **Model size: 2.07 MB** (PyTorch) / **1.84 MB** (INT8 ONNX)
 - **GPU throughput: 31.3 FPS** @ 256×256 resolution
-- **CPU throughput: ~2.2 FPS** (FP32 ONNX, single-thread)
+- **RasberryPi4 throughput: ~2.2 FPS** (FP32 ONNX, single-thread)
 
 ---
 
@@ -165,10 +165,10 @@ out  = sess.run(None, {sess.get_inputs()[0].name: inp})
 |---|---|---|---|
 | Kaggle / Colab (GPU) | PyTorch (CUDA) | 256×256 | ~31 FPS |
 | Desktop CPU | FP32 ONNX | 256×256 | ~2.2 FPS |
-| Raspberry Pi 4 | FP32 ONNX | 256×256 | TBD |
+| Raspberry Pi 4 | FP32 ONNX | 256×256 | 1-2 FPS |
 
 ---
 
 ## License
 
-This project is released for research and educational purposes. See `LICENSE` for details.
+This project is released for research and educational purposes.
