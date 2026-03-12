@@ -14,7 +14,7 @@ Key highlights:
 - **Test SSIM: 0.9977** (near-perfect structural fidelity)
 - **Model size: 2.07 MB** (PyTorch) / **1.84 MB** (INT8 ONNX)
 - **GPU throughput: 31.3 FPS** @ 256×256 resolution
-- **RasberryPi4 throughput: ~2.2 FPS** (FP32 ONNX, single-thread)
+- **RasberryPi4 throughput: 1-2 FPS** (FP32 ONNX, single-thread)
 
 ---
 
